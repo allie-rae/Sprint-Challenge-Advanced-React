@@ -30,7 +30,7 @@ class ClassComponent extends Component {
     }
 
     render(){
-        return <StyledDiv>{this.state.players.map(player => <PlayerCard player={player} key={player.id}/>)}</StyledDiv>
+        return <StyledDiv id="classcomponent">{this.state.players.map(player => <PlayerCard player={player} key={player.id}/>)}</StyledDiv>
     }
 }
 

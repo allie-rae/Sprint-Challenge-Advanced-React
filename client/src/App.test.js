@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as rtl from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
+import ClassComponent from './components/ClassComponent';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(rtl.cleanup);
+
+test('renders without crashing', () => {
+  const wrapper = rtl.render(<App />);
+  const appText = wrapper.queryByText(/women's world cup/i);
+  expect(appText).toBeInTheDocument();
 });
+
+// test('renders without crashing', () => {
+//   const classcomponent = rtl.render(<ClassComponent />)
+//   const element2 = classcomponent.queryByTestId('classcomponent')
+//   expect(element2).toBeTruthy();
+// })
