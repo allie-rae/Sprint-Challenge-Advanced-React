@@ -44,4 +44,11 @@ button {
   font-size: 0.9rem;
   padding: 5px 25px;
   border-radius: 3px;
+  display: block;
+  margin: 0 auto;
+}
+
+.graph {
+  display: inline-block;
+  margin: 20px auto;
 }

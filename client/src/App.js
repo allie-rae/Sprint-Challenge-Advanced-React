@@ -1,5 +1,6 @@
 import React from 'react';
 import ClassComponent from './components/ClassComponent';
+import GraphStretch from './components/GraphStretch';
 import { useDarkMode } from './hooks/useDarkMode';
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           >
           Dark Mode
       </button>
+      <GraphStretch />
       <ClassComponent />
     </div>
   );
