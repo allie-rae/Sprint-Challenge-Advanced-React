@@ -10,7 +10,7 @@ width: 30%;
 
 const PlayerCard = (props) => {
     return(
-        <StyledPlayerDiv>
+        <StyledPlayerDiv id="data-testid">
             <h4>{props.player.name}</h4>
             <p>{props.player.country}</p>
         </StyledPlayerDiv>
