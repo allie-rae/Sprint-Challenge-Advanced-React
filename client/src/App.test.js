@@ -12,8 +12,8 @@ test('renders without crashing', () => {
   expect(appText).toBeInTheDocument();
 });
 
-// test('renders without crashing', () => {
-//   const classcomponent = rtl.render(<ClassComponent />)
-//   const element2 = classcomponent.queryByTestId('classcomponent')
-//   expect(element2).toBeTruthy();
-// })
+test('renders without crashing', () => {
+  const classcomponent = rtl.render(<ClassComponent />)
+  const element2 = classcomponent.queryAllByTestId();
+  expect(element2).toBeTruthy();
+})
