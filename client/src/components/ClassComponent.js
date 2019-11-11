@@ -21,7 +21,7 @@ class ClassComponent extends Component {
     }
 
     render(){
-        return <div>{this.state.players.map(player => <PlayerCard player={player} />)}</div>
+        return <div>{this.state.players.map(player => <PlayerCard player={player} key={player.id}/>)}</div>
     }
 }
 
